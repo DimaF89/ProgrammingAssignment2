@@ -1,17 +1,16 @@
 ## R programming assignment 2 - May 2015
 
-## The function 'makeCacheMatrix' takes a quadratic Matrix x (of dimensio (n x n)) as argument. 
-## The function 'cacheSolve'  calculates and caches the inverse of the object created by 'makeCacheMatrix
-## or retrieves the cached data, respectively.
+## The function 'makeCacheMatrix' takes a quadratic Matrix x (of dimension (n x n)) as argument. 
+# The function 'cacheSolve'  calculates and caches the inverse of the object created by 'makeCacheMatrix
+# or retrieves the cached data, respectively.
 
-## 'makeCacheMatrix' takes a quadratic matrix as input and creates a list object from which the follwowing function are callable:
+## 'makeCacheMatrix' takes a quadratic matrix as input and creates a list object from which the follwowing functions are callable:
 #       set(): change the input matrix x of makeCacheMatrix
 #       get(): retrieve the input x of makeCacheMatrix
-#       Setinv(): let's the user manually set the inverse
-#       getinv(): retrieves the inverse of x by returning 'invMat'
+#       setinv(): let's the user manually set the inverse
+#       getinv(): retrieves the inverse of x by returning the variable 'invMat'
 
 makeCacheMatrix <- function(x = matrix()) {
-        dimensions <- dim(x)
         if (class(x) != 'matrix' || dimensions[1] != dimensions[2]) {
                 cat("########\nWarning: 'makeCacheMatrix' takes a matrix of type (n x n) as argument\n########")
         }
